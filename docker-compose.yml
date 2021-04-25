@@ -2,7 +2,7 @@ services:
   zapache:
     build: .
     ports:
-      - '8080:80'
+      - '127.0.0.1:3366'
     volumes:
       - ".:/var/www/html"
     links:
@@ -12,4 +12,4 @@ services:
     volumes: 
       - /tmp/zmysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: 
